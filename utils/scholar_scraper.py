@@ -113,9 +113,10 @@ def to_html(articles, start_year):
     return html_content
 
 if __name__ == "__main__":
-    username = "kdJBxv8AAAAJ&hl=en"
-    start_year = 2016
+    #username = "kdJBxv8AAAAJ&hl=en"
+    username = "lPj5KHMAAAAJ"
+    start_year = 2008
     articles = scrape_google_scholar(username)
     articles_html = to_html(articles, start_year=start_year)
-    with open("utils/scraped_publications.html", "w", encoding="utf-8") as html_file:
+    with open("scraped_publications.html", "w", encoding="utf-8") as html_file:
         html_file.write(articles_html)
